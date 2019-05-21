@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-search": "/vant-weapp/search/index",
+    "i-row": "/iview-weapp/row/index",
+    "i-col": "/iview-weapp/col/index"
+  }
+}

@@ -1,0 +1,44 @@
+<!--componet/home/home.wxml-->
+<view class="content">
+  <!--搜索框-->
+  <van-search
+    value="{{ value }}"
+    placeholder="请输入搜索工具名称"
+    use-action-slot
+    bind:search="onSearch"
+    custom-class="toolSearch"
+    background="#63b4fe">
+    <i slot="action" class="iconfont icon-saomiao"></i>
+  </van-search>
+
+  <!--轮播图-->
+  <swiper
+    indicator-dots="{{indicatorDots}}"
+    indicator-active-color="{{indicatorActiveColor}}"
+    autoplay="{{autoplay}}"
+    interval="{{interval}}"
+    duration="{{duration}}"
+    indicator-color="{{indicatorColor}}"
+    class='swiperView'>
+    <block wx:for="{{imgUrls}}" wx:key>
+      <swiper-item>
+        <image src="{{item}}" class="swiper_image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!--工具栏-->
+  <view class="colView mt10">
+     <i-row gutter="0" class='toolRow'>
+      <block wx:for='{{toolData}}' wx:key>
+        <i-col span="6" class='toolCol'>
+          <view class='toolSingel' style='background: linear-gradient(to right, {{item.color[0]}}, {{item.color[1]}});' data-items='{{item}}' bindtap='toolPage'>
+            <i class='iconfont {{item.icon}}'></i>
+          </view>
+          <text>{{item.label}}</text>
+        </i-col>
+      </block>
+    </i-row>
+  </view>
+</view>
+

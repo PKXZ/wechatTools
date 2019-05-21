@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/wetherForecast/wetherForecast",
+    "pages/main/main",
+    "pages/photographic/photographic"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#63b4fe",
+    "navigationBarTitleText": "工具集",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

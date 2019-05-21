@@ -1,0 +1,34 @@
+/**app.wxss**/
+@import "/utils/iconfont.wxss";
+page {
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  padding: 0;
+  margin: 0;
+} 
+.van-search__content{
+  border-radius: 5px;
+}
+.van-search__action:hover{
+  background-color:#63b4fe !important;
+}
+.van-search__action{
+  padding: 0 0 0 10px !important;
+  background:#63b4fe !important;
+}
+.colView{
+  background: #fff;
+  margin-bottom: 25rpx;
+  padding: 10px;
+}
+.mt10{
+  margin-top: 20rpx;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}

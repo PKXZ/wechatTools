@@ -1,0 +1,73 @@
+<view class="wetherContent">
+  <!--上半部分-->
+  <view class="wetherTop">
+      <!--更多按钮-->
+      <view class='wetherGengduo' bindtap='gengduoFun'>
+        <i class="iconfont icon-dingwei3 fl"></i>
+        <span class="fl">{{currentCity}}</span>
+        <i class='iconfont icon-gengduo fr'></i>
+      </view>
+      <view class="wetherInfo">
+        <i class="iconfont currentIcon {{currentIcon}}"></i>
+        <text class="currentType">{{currentType}}</text>
+        <view class="tag">
+          <view>
+            <i class="iconfont icon-temp" />
+            <view>
+              <text>温度</text>
+              <text>23℃</text>
+            </view>
+          </view>
+          <view>
+            <i class="iconfont icon-fengli" />
+            <view>
+              <text>风力</text>
+              <text>3级</text>
+            </view>
+          </view>
+          <view>
+            <i class="iconfont icon-shidu" />
+            <view>
+              <text>湿度</text>
+              <text>50%</text>
+            </view>
+          </view>
+        </view>
+      </view>
+  </view>
+  <!--下半部分-->
+  <view class="wetherBottom">
+      <ul>
+        <li wx:for="{{wetherList}}" wx:key="key">
+          <text class="wetherDate">{{item.date}}</text>
+          <text>{{item.xq}}</text>
+          <i class="iconfont {{item.icon}}"></i>
+          <text>{{item.type}}</text>
+          <text>{{item.wd}}</text>
+        </li>
+      </ul>
+  </view>
+</view>
+ <!--更多弹出层隐藏-->
+  <i-drawer 
+      mode="right" 
+      visible="{{gengduoCT}}" 
+      bind:close="gengduoFun" 
+      i-class="gengduoDrawer"
+      style="position:absolute">
+      <view class="demo-container">
+          <view class="gengduoAdd">
+            <i class="iconfont icon-jia"></i>
+          </view>
+          <view class="gengduoContent">
+            <ul>
+              <li wx:for="{{cityList}}" wx:key="key">
+              <i class="iconfont icon-dizhidingwei"></i>
+                {{item.cityName}}
+                {{item.wd}}
+              </li>
+              <div style="clear:both;"></div>
+            </ul>
+          </view>
+      </view>
+  </i-drawer>

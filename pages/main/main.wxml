@@ -1,0 +1,15 @@
+<!--主页-->
+<import src="../../template/template.wxml"></import>
+
+<view class="main">
+  <!--主体内容-->
+  <view class="container">
+    <home wx:if="{{selectedIndex === 0}}"></home>
+    <find wx:if="{{selectedIndex === 1}}"></find>
+    <message wx:if="{{selectedIndex === 3}}"></message>
+    <myself wx:if="{{selectedIndex === 4}}"></myself>
+  </view>
+
+  <!--底部栏-->
+  <template is="tabBar"  data="{{tabBarList}}" selectedIndex="{{selectedIndex}}"></template>
+</view>

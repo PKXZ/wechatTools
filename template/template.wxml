@@ -1,0 +1,25 @@
+<!--自定义底部栏-->
+<template name="tabBar">
+  <view class="tabBar">
+    <block wx:for="{{tabBarList}}" wx:key="key">
+        <view 
+            wx:if="{{!item.specials}}"
+            class="tabBarItem {{item.selected ? 'tabBarSelected' : ''}}"
+            data-type="{{item.type}}"
+            data-key="{{index}}"
+            bindtap='tabClick'>
+          <image class="tabBarImg" src="{{item.imgs}}"></image>
+          <view class="tabText">{{item.text}}</view>
+        </view>
+        <view 
+            wx:else
+            class="tabBarItem {{item.selected ? 'tabBarSelected' : ''}} {{item.specials ? 'tabBarSpecial' : ''}}" 
+            data-type="{{item.type}}" 
+            data-key="{{index}}" 
+            bindtap='tabClick'>
+          <image class="tabBarImg" src="{{item.imgs}}"></image>
+          <view class="tabText">{{item.text}}</view>
+        </view>
+    </block>
+  </view>
+</template>

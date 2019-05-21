@@ -1,0 +1,163 @@
+/* pages/wetherForecast/wetherForecast.wxss */
+@import "../../app.wxss";
+@import "/utils/iconfont.wxss";
+.wetherContent{
+  height:100%;
+}
+.wetherTop{
+  width: 100%;
+  height: 45%;
+  background: linear-gradient(to top, #6f86d6, #48c6ef);
+}
+.wetherGengduo{
+  text-align: right;
+}
+.wetherGengduo i{
+  font-size: 48rpx;
+  color: #fff;
+  margin: 0 30rpx;
+}
+.wetherGengduo span{
+  font-size: 36rpx;
+  color: #fff;
+  margin-left: -20rpx;
+}
+.wetherInfo{
+  width: 90%;
+  height: auto;
+  /* background-color: rgba(255,255,255,0.2); */
+  margin: 0 auto;
+  padding-top: 40rpx;
+}
+.wetherInfo .currentIcon{
+  font-size: 200rpx;
+  color: #fff;
+  display: block;
+  text-align:center;
+}
+.wetherInfo .currentType{
+  margin: 40rpx 0;
+}
+.wetherInfo text{
+  font-size: 40rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wetherInfo .tag{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.wetherInfo .tag text{
+  font-size: 30rpx;
+}
+.wetherInfo .tag view{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20rpx;
+}
+.wetherInfo .tag view view{
+  display: flex;
+  flex-direction: column;
+}
+.wetherInfo .tag view i{
+  font-size: 80rpx;
+  color: #fff;
+}
+
+/*下半部分*/
+.wetherBottom{
+  width: 100%;
+  height: 55%;
+}
+.wetherBottom ul{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.wetherBottom ul:after{
+  clear:both;
+  display:block;
+  content:" ";
+}
+.wetherBottom ul li{
+  float:left;
+  text-align: center;
+  border-right: 1px solid #ededed;
+  height: 100%;
+  width: 19.6%;
+}
+.wetherBottom ul li:hover{
+  background: #eee;
+}
+.wetherBottom ul li:last-child{
+  border-right: transparent;
+}
+.wetherBottom ul li text{
+  display: block;
+  color: #7a7a7a;
+  margin: 45rpx 0;
+  line-height: 1;
+}
+.wetherBottom ul li i{
+  font-size: 70rpx;
+  color: #7a7a7a;
+  line-height: 2;
+}
+.wetherBottom .wetherDate{
+  font-size: 35rpx;
+  margin-top: 60rpx;
+}
+
+/*侧边栏*/
+.gengduoDrawer .demo-container{
+  height: 100%;
+  width: 100%;
+}
+.gengduoDrawer .demo-container .gengduoContent{
+  padding: 20rpx;
+}
+.gengduoAdd{
+  width: 100%;
+  background: #fff;
+  height: 70rpx;
+}
+.gengduoAdd i{
+  font-size: 70rpx;
+  float: right;
+}
+.gengduoAdd:after{
+  clear:both;
+  display:block;
+  content:" ";
+}
+.gengduoContent{
+  width: 100%;
+  height: calc(100% - 110rpx);
+}
+.gengduoContent ul{
+  width: 100%;
+  height: 100%;
+}
+.gengduoContent ul:after{
+  clear:both;
+  display:block;
+  content:" ";
+}
+.gengduoContent ul li{
+  width: 100%;
+  float:left;
+  padding: 20rpx 0;
+  border-bottom:1px solid #EEEEEE;
+  color: #2b2b2b;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.gengduoContent ul li:hover{
+  background: #eee;
+}
