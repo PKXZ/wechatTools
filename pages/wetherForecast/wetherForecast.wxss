@@ -1,6 +1,6 @@
 /* pages/wetherForecast/wetherForecast.wxss */
 @import "../../app.wxss";
-@import "/utils/iconfont.wxss";
+@import "/lib/iconfont.wxss";
 .wetherContent{
   height:100%;
 }

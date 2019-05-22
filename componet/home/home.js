@@ -96,7 +96,7 @@ Component({
           "#49bff3", "#9df8f7"
         ]
       }, {
-        label: 'xxx',
+        label: '语音读报',
         type: 'todayHeadline',
         icon: 'icon-xinwen',
         color: [

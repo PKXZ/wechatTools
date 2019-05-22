@@ -1,5 +1,5 @@
 /* componet/home/home.wxss */
-@import "../../utils/iconfont.wxss";
+@import "../../lib/iconfont.wxss";
 @import "../../app.wxss";
 .content{
   width: 100%;

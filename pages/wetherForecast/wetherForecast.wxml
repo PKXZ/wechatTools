@@ -1,9 +1,10 @@
+<!--天气预报界面-->
 <view class="wetherContent">
   <!--上半部分-->
   <view class="wetherTop">
       <!--更多按钮-->
       <view class='wetherGengduo' bindtap='gengduoFun'>
-        <i class="iconfont icon-dingwei3 fl"></i>
+        <i class="iconfont icon-dizhidingwei fl"></i>
         <span class="fl">{{currentCity}}</span>
         <i class='iconfont icon-gengduo fr'></i>
       </view>
@@ -48,26 +49,28 @@
       </ul>
   </view>
 </view>
- <!--更多弹出层隐藏-->
-  <i-drawer 
-      mode="right" 
-      visible="{{gengduoCT}}" 
-      bind:close="gengduoFun" 
-      i-class="gengduoDrawer"
-      style="position:absolute">
-      <view class="demo-container">
-          <view class="gengduoAdd">
-            <i class="iconfont icon-jia"></i>
-          </view>
-          <view class="gengduoContent">
-            <ul>
-              <li wx:for="{{cityList}}" wx:key="key">
-              <i class="iconfont icon-dizhidingwei"></i>
-                {{item.cityName}}
-                {{item.wd}}
-              </li>
-              <div style="clear:both;"></div>
-            </ul>
-          </view>
-      </view>
-  </i-drawer>
+<!--更多弹出层隐藏-->
+<i-drawer 
+    mode="right" 
+    visible="{{gengduoCT}}" 
+    bind:close="gengduoFun" 
+    i-class="gengduoDrawer"
+    style="position:absolute">
+    <view class="demo-container">
+        <view class="gengduoAdd">
+          <i class="iconfont icon-jia"></i>
+        </view>
+        <view class="gengduoContent">
+          <ul>
+            <li wx:for="{{cityList}}" wx:key="key">
+            <i class="iconfont icon-dizhidingwei"></i>
+              {{item.cityName}}
+              {{item.wd}}
+            </li>
+            <div style="clear:both;"></div>
+          </ul>
+        </view>
+    </view>
+</i-drawer>
+<!--弹出层-->
+<i-toast id="toast" />

@@ -1,3 +1,4 @@
 <!--componet/message/message.wxml-->
 <view class="content">
+  消息
 </view>
