@@ -1,5 +1,5 @@
 // pages/cityIndexSelector/cityIndexSelector.js
-import { cities } from './city';
+import { cities } from '../../lib/city.js';
 Page({
 
   /**
@@ -9,6 +9,7 @@ Page({
     cities: []
   },
   onChange(event) {
+    debugger
     console.log(event.detail, 'click right menu callback data')
   },
   /**
